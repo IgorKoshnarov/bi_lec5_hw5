@@ -1,0 +1,9 @@
+version: '3'
+services:
+  development:
+    build:
+      context: .
+    tty: true
+    volumes: 
+      - ./:/project
+

@@ -1,0 +1,47 @@
+{
+	"name": "Erlang dev container",
+
+	"service": "development",
+	// Sets the run context to one level up instead of the .devcontainer folder.
+	"context": "..",
+
+	// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
+	// "dockerFile": "..\\Dockerfile",
+
+	"dockerComposeFile": "..\\docker-compose.yml",
+
+	// "workspaceMount": "source=project,target=/project,type=volume",
+	"workspaceFolder": "/project",
+
+	// "mounts": [
+	// 	"source=build,target=${containerWorkspaceFolder}/_build,type=volume",
+	// 	"source=deps,target=${containerWorkspaceFolder}/deps,type=volume"
+	// ],
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"erlang-ls.erlang-ls",
+		"2gua.rainbow-brackets",
+		"albert.tabout",
+		"vscode-icons-team.vscode-icons"
+	]
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Uncomment the next line to run commands after the container is created - for example installing curl.
+	// "postCreateCommand": "apt-get update && apt-get install -y curl",
+
+	// Uncomment when using a ptrace-based debugger like C++, Go, and Rust
+	// "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
+
+	// Uncomment to use the Docker CLI from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker.
+	// "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
+
+	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
+	// "remoteUser": "vscode"
+}
